@@ -86,7 +86,6 @@
 }
 
 .ex-11-icon:hover {
-    animation: normal;
     animation-name: rotation;
     animation-duration: 3s;
     animation-timing-function: linear;
@@ -115,11 +114,7 @@
     animation-timing-function: linear;
 }
 
-.ex-12-button:hover .ex-12-buttom-white {
-    background-color: blue;
-}
-
-@keyframes rotation {
+@keyframes move-12-top {
     0% {
         left: 10%;
     }
@@ -131,11 +126,31 @@
     }
 }
 
-.ex13-button:hover .ex-13-bottom-white {
-    animation: moveBottomWhiteCompletely 2s linear;
+.ex-12-button:hover .ex-12-bottom-white {
+    animation-name: move-12-bottom;
+    animation-duration: 3s;
+    animation-timing-function: linear;
 }
 
-@keyframes moveBottomWhiteCompletely {
+@keyframes move-12-bottom {
+    0% {
+        right: 10%;
+    }
+    50% {
+        right: calc(100% - 60px);
+    }
+    100% {
+        right: 10%;
+    }
+}
+
+.ex13-button:hover .ex-13-bottom-white {
+    animation-name: move-13-bottom;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+
+@keyframes move-13-bottom {
     0% {
         bottom: -10px;
         right: 20%;
@@ -159,5 +174,38 @@
     100% {
         bottom: -10px;
         right: 20%;
+    }
+}
+
+.ex-13-button:hover .ex-13-top-white {
+    animation-name: move-13-top;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+
+@keyframes move-13-top {
+    0% {
+        left: 10%;
+        top: -10px;
+    }
+    30% {
+        left: calc(100% - 30px);
+        top: -10px;
+    }
+    45% {
+        left: calc(100% - 30px);
+        top: 100%;
+    }
+    75% {
+        left: 0;
+        top: 100%;
+    }
+    90% {
+        left: -15px;
+        top: -10px;
+    }
+    100% {
+        left: 10%;
+        top: -10px;
     }
 }
